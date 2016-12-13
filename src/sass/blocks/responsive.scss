@@ -1,0 +1,21 @@
+body {
+  min-width: 320px;
+}
+@media screen and (max-width: 1000px){
+  header{
+    .nav{
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      max-width: 0;
+      max-height: 0;
+      overflow: hidden;
+      background-color: #fff;
+      padding: 0;
+      margin: 0;
+    }
+    &:after {
+
+    }
+  }
+}
