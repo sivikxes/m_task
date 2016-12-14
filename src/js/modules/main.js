@@ -21,7 +21,7 @@ $(function () {
 
     var mySwiper = new Swiper('.swiper-container',{
         mode:'horizontal',
-        loop: true,
+        loop: false,
         calculateHeight:true,
         onSlideChangeEnd: function (e) {
             $tabsLink.removeClass('active');

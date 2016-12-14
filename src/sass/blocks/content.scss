@@ -254,21 +254,21 @@ header {
     white-space: nowrap;
     position: relative;
     border: 1px solid darken(#fff32e,15%);
-    box-shadow: 1px 1px 1px rgba(0,0,0,.4);
     transition: all .3s;
 
     &:hover {
-      background-color: rgba(#fff32e,.7);
-
+      box-shadow: 0 0 2px 4px rgba(#fff32e,.4);
     }
-    
+
     &.active {
-      background-color: #fff32e;
+      box-shadow: 0 0 2px 4px rgba(#fff32e,.4);
+      img {
+        zoom: 1.2;
+      }
     }
     
     img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 0;
