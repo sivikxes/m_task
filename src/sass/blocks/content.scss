@@ -6,6 +6,16 @@ body {
   font-size: 16px;
   font-family: 'Exo 2', sans-serif;
 }
+.main-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/first_slide_bg.jpg) no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
 
 header {
   text-align: center;
@@ -16,7 +26,7 @@ header {
   background-color: transparent;
   color: #fff;
   transition: all 300ms;
-  z-index: 2;
+  z-index: 4;
   height: 90px;
 
   &>a{
@@ -35,6 +45,8 @@ header {
     }
     .logo_scr {
       display: inline-block;
+      position: relative;
+      top: 4px;
     }
   }
   .logo_scr{
@@ -51,6 +63,8 @@ header {
     vertical-align: top;
     padding: 0 30px;
     color: inherit;
+    margin: 14px 0;
+    z-index: 2;
 
     a {
       display: inline-block;
@@ -112,7 +126,7 @@ header {
     }
   }
 
-  li {
+  .nav_item {
     display: inline-block;
   }
 }
@@ -161,6 +175,8 @@ header {
 .starwars {
   display: block;
   margin: 20px auto 0;
+  max-width: 470px;
+  width: 100%;
 }
 
 .btns-wrap {
@@ -178,7 +194,7 @@ header {
     color: black;
     box-sizing: border-box;
     padding: 0 10px;
-    margin: 0 5px;
+    margin: 0 5px 5px;
     transition: all 200ms;
 
     &:hover {
@@ -197,18 +213,261 @@ header {
   }
 }
 
-.arrow {
-  display: inline-block;
-  margin-top: 50px;
-}
 
 .section {
-  height: 100vh;
-  min-height: 670px;
   text-align: center;
   overflow: hidden;
+  background-color: #fff;
   &.sec1 {
-    background: url("../images/first_slide_bg.jpg") no-repeat;
-    background-size: cover;
+    height: 100vh;
+    background-color: transparent;
+    min-height: 670px;
   }
+  &.sec2 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &.sec5 {
+    height: 100vh;
+    background-color: #292c2e;
+    min-height: 670px;
+    padding-top: 60px;
+  }
+}
+.section-title {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.tabs {
+  font-size: 0;
+  margin: 20px 0 50px;
+  a {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 100px;
+    white-space: nowrap;
+    position: relative;
+    border: 1px solid darken(#fff32e,15%);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    transition: all .3s;
+
+    &:hover {
+      background-color: rgba(#fff32e,.7);
+
+    }
+    
+    &.active {
+      background-color: #fff32e;
+    }
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+.swiper-wrapper {
+  margin-top: 50px;
+  overflow: hidden;
+  .swiper-slide{
+    width: 90%;
+    text-align: center;
+    img {
+      width: 85%;
+      max-width: 600px;
+    }
+  }
+  .product-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .scroll-view{
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 20px auto;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .price-wrap {
+
+    strong {
+      font-size: 22px;
+    }
+    .btn {
+      background-color: #fff32e;
+      border-radius: 6px;
+      font-size: 26px;
+      font-weight: bolder;
+      display: inline-block;
+      text-decoration: none;
+      color: #000;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      margin: 0 5px 5px;
+      transition: all .2s;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background-color: #222;
+      }
+    }
+  }
+}
+.popup2 {
+  display: none;
+}
+
+
+.box5{
+  background-color: #292c2e;
+  text-align: center;
+  margin-top: 550px;
+  height: 620px;
+  border-bottom: 1px solid #a9aaab;
+}
+.text51{
+  position: relative;
+  left: 50px;
+  float: none;
+  padding-right: 80px;
+  padding-top: 45px;
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+.text52{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  color: #bdbebe;
+  padding-top: 10px;
+  padding-bottom: 65px;
+}
+.spisok li{
+  float: left;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 65px;
+}
+.spisok li:nth-child(2){
+  margin-right: 55px;
+}
+.spisok li:nth-child(3){
+  margin-right: 50px;
+}
+.spisok{
+  margin-left: 185px;
+}
+.pidspisok{
+  margin-left: 182px;
+  padding-top: 9px;
+  padding-bottom: 60px;
+}
+.knopka51{
+  text-decoration: none;
+  color: #292c2e;
+  background-image: url(public/images/knopka3.png);
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 39px;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 6px;
+  font-weight: bold;
+  padding-top: 7px;
+  margin-left: 566px;
+}
+.knopka51:hover{
+  background-image: url(public/images/knopka33.png);
+  color: black;
+}
+.text53{
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.text54{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #bdbebe;
+}
+footer{
+  background-color: #505050;
+  height: 85px;
+}
+.face{
+  float: left;
+  padding: 35px 0 0 165px;
+}
+.insta{
+  float: left;
+  padding: 36px 0 0 20px;
+}
+.vk{
+  float: left;
+  padding: 35px 0 0 20px;
+}
+.border0{
+  float: left;
+  padding: 20px 10px 0 10px;
+}
+.tel0{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #fff;
+  padding: 22px 0 0 10px;
+  float: left;
+  padding-right: 135px;
+}
+.tel0 p{
+  padding-bottom: 10px;
+}
+.tel0 p:last-child{
+  padding-bottom: 0;
+}
+.textf{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #fff;
+  padding: 64px 0 0 0;
+  float: left;
+}
+.textff{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #fff;
+  padding-top: 64px;
+  float: right;
+  padding-right: 177px;
 }
