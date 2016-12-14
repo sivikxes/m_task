@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <title>Star Wars</title>
-    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+    <link rel="stylesheet" type="text/css" href="public/css/idangerous.swiper.css" />
     <link rel="stylesheet" type="text/css" href="public/css/main.css" />
     <noscript>
         <style>
@@ -18,18 +18,19 @@
     </noscript>
 </head>
 <body>
-<div class="section sec1">
+<div class="main-bg"></div>
+<div class="section sec1" id="sec1">
     <header>
-        <a href="">
+        <a href="#sec1" class="section-btn" data-href="#sec1">
             <img src="public/images/logo.png" class="logo" alt="">
             <img class="logo_scr" src="public/images/header_scroll_icon.png">
         </a>
-        <ul class="nav">
-            <li><a href="#box333">О товаре</a></li>
-            <li><a href="#katalog11">Фото</a></li>
-            <li><a href="#otzuvu1">Отзывы</a></li>
-            <li><a href="#dostavka">Доставка</a></li>
-        </ul>
+        <div class="nav">
+            <div class="nav_item"><a class="section-btn" href="#box333" data-href="">О товаре</a></div>
+            <div class="nav_item"><a class="section-btn" href="#sec2" data-href="#sec2">Фото</a></div>
+            <div class="nav_item"><a class="section-btn" href="#otzuvu1" data-href="">Отзывы</a></div>
+            <div class="nav_item"><a class="section-btn" href="#sec5" data-href="#sec5">Доставка</a></div>
+        </div>
         <div class="right-pos">
             <p class="tell">+38 (096) 104-69-81</p>
             <a href="#win5" class="zvonok1">Заказать</a>
@@ -46,37 +47,128 @@
             <a class="btn" href="#win5">Заказать</a>
             <a href="#katalog11" class="btn btn2">Смотреть в каталоге</a>
         </div>
-        <a href="#katalog11" class="arrow"><img src="public/images/strelku.png" alt=""></a>
     </div>
 </div>
-<div class="katalog">
-    <a name="katalog11">Каталог продукции</a>
-</div>
-<div id="rg-gallery" class="rg-gallery">
-    <div class="rg-thumbs">
-        <!-- Elastislide Carousel Thumbnail Viewer -->
-        <div class="es-carousel-wrapper">
-            <div class="es-nav">
-                <span class="es-nav-prev">Previous</span>
-                <span class="es-nav-next">Next</span>
+<div class="section sec2" id="sec2">
+    <div class="section-title">
+        Каталог продукции
+    </div>
+    <div class="swiper-container">
+        <div class="tabs">
+            <a href="#" class="active">
+                <img src="public/images/products/droid1.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid2.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid3.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid4.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid5.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid6.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid7.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid8.png" alt="">
+            </a>
+            <a href="#" class="">
+                <img src="public/images/products/droid9.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="public/images/products/droid1.png" data-large="droid1.png" alt="image01" data-description="MILLENIUM FALCON " />
+                <div class="product-title">MILLENIUM FALCON</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
             </div>
-            <div class="es-carousel">
-                <ul>
-                    <li><a href="#"><img src="public/images/droid1.png" data-large="droid1.png" alt="image01" data-description="MILLENIUM FALCON " /></a></li>
-                    <li><a href="#"><img src="public/images/droid2.png" data-large="droid2.png" alt="image02" data-description="IMPERIAL STAR DESTROYER " /></a></li>
-                    <li><a href="#"><img src="public/images/droid3.png" data-large="droid3.png" alt="image03" data-description="Destroyer Droid " /></a></li>
-                    <li><a href="#"><img src="public/images/droid4.png" data-large="droid4.png" alt="image04" data-description="X-WING FIGHTER " /></a></li>
-                    <li><a href="#"><img src="public/images/droid5.png" data-large="droid5.png" alt="image05" data-description="AT-ST" /></a></li>
-                    <li><a href="#"><img src="public/images/droid6.png" data-large="droid6.png" alt="image06" data-description="Tie Fighter" /></a></li>
-                    <li><a href="#"><img src="public/images/droid7.png" data-large="droid7.png" alt="image07" data-description="AT-AT WALKER " /></a></li>
-                    <li><a href="#"><img src="public/images/droid8.png" data-large="droid8.png" alt="image08" data-description="Tie Advanced" /></a></li>
-                    <li><a href="#"><img src="public/images/droid9.png" data-large="droid9.png" alt="image08" data-description="R2-D2 " /></a></li>
-                </ul>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid2.png" data-large="droid2.png" alt="image02" data-description="IMPERIAL STAR DESTROYER " />
+                <div class="product-title">IMPERIAL STAR DESTROYER</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid3.png" data-large="droid3.png" alt="image03" data-description="Destroyer Droid " />
+                <div class="product-title">Destroyer Droid</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid4.png" data-large="droid4.png" alt="image04" data-description="X-WING FIGHTER " />
+                <div class="product-title">X-WING FIGHTER</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid5.png" data-large="droid5.png" alt="image05" data-description="AT-ST" />
+                <div class="product-title">AT-ST</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid6.png" data-large="droid6.png" alt="image06" data-description="Tie Fighter" />
+                <div class="product-title">Tie Fighter</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid7.png" data-large="droid7.png" alt="image07" data-description="AT-AT WALKER " />
+                <div class="product-title">AT-AT WALKER</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid8.png" data-large="droid8.png" alt="image08" data-description="Tie Advanced" />
+                <div class="product-title">Tie Advanced</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="public/images/products/droid9.png" data-large="droid9.png" alt="image08" data-description="R2-D2 " />
+                <div class="product-title">R2-D2</div>
+                <div class="scroll-view">Смотреть в 3D</div>
+                <div class="price-wrap">
+                    Цена:<strong>179грн</strong><br>
+                    <div class="btn">Заказать</div>
+                </div>
             </div>
         </div>
-        <!-- End Elastislide Carousel Thumbnail Viewer -->
-    </div><!-- rg-thumbs -->
-</div><!-- rg-gallery -->
+    </div>
+</div>
+
 
 </div><!-- content -->
 </div><!-- container -->
@@ -180,8 +272,8 @@
 </div>
 
 
-<div class="box5">
-    <a name="dostavka" class="text51">Как мы работаем?</a>
+<div class="section sec5" id="sec5">
+    <div class="text51">Как мы работаем?</div>
     <p class="text52">Наличие интересующего товара уточняйте у наших менеджеров.</br>Успей сделать подарок дорогому человеку!</p>
     <ul class="spisok">
         <li>Оставляете заявку</li>
@@ -193,23 +285,9 @@
     <a href="#win5" class="knopka51">Заказать</a>
     <p class="text53">Сделайте заказ в один клик!</br>Здесь и сейчас!</p>
     <p class="text54">После регистрации вашей заявки на этом сайте, оператор</br>рассмотрит ее и в ближайшее время менеджер свяжется с Вами .</br>После чего мы отправляем заказ службой доставки.</br>Мы ради что вы с нами!</p>
+   
 </div>
 
-<footer>
-    <a href=""><img class="face" src="public/images/facebook.png" alt="Facebook"></a>
-    <a href=""><img class="insta" src="public/images/instagram.png" alt="Instagram"></a>
-    <a href=""><img class="vk" src="public/images/vk.png" alt="VK"></a>
-    <img src="public/images/border.png" class="border0" alt="">
-    <div class="tel0">
-        <p>+38(096) 104 69 81</p>
-        <p>+38(096) 543 11 32</p></div>
-    <p class="textf">Все права защищены 2016</p>
-    <p class="textff">Дизайн - Madk</p>
-</footer>
-
-
-
-<a href="#x" class="overlay2" id="win5"></a>
 <div class="popup2">
     <form id="contact" method="get" action="lend.php">
         <input name="name" placeholder="Укажите ваше имя!" class="name" type="text" required />
