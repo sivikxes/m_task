@@ -33,7 +33,7 @@
         </div>
         <div class="right-pos">
             <p class="tell">+38 (096) 104-69-81</p>
-            <a href="#win5" class="zvonok1">Заказать</a>
+            <a href="#win5" class="zvonok1 buy-btn">Заказать</a>
         </div>
     </header>
     <div class="section-content">
@@ -44,8 +44,8 @@
         </div>
         <img src="public/images/star-wars.png" class="starwars" alt="Star Wars">
         <div class="btns-wrap">
-            <a class="btn" href="#win5">Заказать</a>
-            <a href="#katalog11" class="btn btn2">Смотреть в каталоге</a>
+            <a class="btn buy-btn" href="#win5">Заказать</a>
+            <a href="#sec2" data-href="#sec2" class="btn btn2 section-btn">Смотреть в каталоге</a>
         </div>
     </div>
 </div>
@@ -87,7 +87,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -96,7 +96,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -105,7 +105,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -114,7 +114,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -123,7 +123,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -132,7 +132,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -141,7 +141,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -150,7 +150,7 @@
                 <div class="scroll-view">Смотреть в 3D</div>
                 <div class="price-wrap">
                     Цена:<strong>179грн</strong><br>
-                    <div class="btn">Заказать</div>
+                    <div class="btn buy-btn">Заказать</div>
                 </div>
             </div>
         </div>
@@ -161,7 +161,7 @@
 </div><!-- content -->
 </div><!-- container -->
 <div class="textt"> <p class="text1111">Цена:</p><p class="text111">179.00 грн.</p></div>
-<a href="#win5" class="knopka3">Заказать</a>
+<a href="#win5" class="knopka3 buy-btn">Заказать</a>
 <p class="kvadrat">У нас лучший 3D конструктор!</p>
 <div class="box2"></div>
 <div class="box22"></div>
@@ -178,7 +178,7 @@
         Star Wars 3D конструктор - это лучший подарок фанатам звездный воин!
         Рекомендуется детям от 14 лет.</p>
         <div class="box34"></div></div>
-    <a href="#win5" class="knopka31">Заказать</a>
+    <a href="#win5" class="knopka31 buy-btn">Заказать</a>
     <a href="#katalog11" class="knopka32">Смотреть подробнее</a>
 </div>
 <div class="box4">
@@ -270,10 +270,9 @@
         <li>Получаете и оплачиваете</li>
     </ul>
     <img src="public/images/pidspisok.png" class="pidspisok" alt="">
-    <a href="#win5" class="knopka51">Заказать</a>
+    <a href="#win5" class="knopka51 buy-btn">Заказать</a>
     <p class="text53">Сделайте заказ в один клик!</br>Здесь и сейчас!</p>
     <p class="text54">После регистрации вашей заявки на этом сайте, оператор</br>рассмотрит ее и в ближайшее время менеджер свяжется с Вами .</br>После чего мы отправляем заказ службой доставки.</br>Мы ради что вы с нами!</p>
-   
 </div>
 
 <div class="popup2">
@@ -285,6 +284,53 @@
         <input name="submit" class="btn" type="submit" value="Отправить" />
     </form action="lend.php" method="post">
     <a class="close" title="Закрыть" href="#close">Х</a>
+</div>
+<div class="modal" id="rotate">
+    <div class="cross">x</div>
+    <div class="title-line">
+
+    </div>
+    <div id="carousel">
+        <img class="cloud9-item" src="public/images/products/AT_AT/1.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/2.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/3.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/4.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/5.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/6.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/7.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/8.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/9.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/10.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/11.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/12.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/13.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/14.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/15.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/16.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/17.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/18.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/19.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/20.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/21.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/22.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/23.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/24.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/25.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/26.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/27.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/28.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/29.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/30.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/31.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/32.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/33.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/34.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/35.jpg">
+        <img class="cloud9-item" src="public/images/products/AT_AT/36.jpg">
+    </div>
+</div>
+<div class="modal" id="buy">
+
 </div>
 <script type="text/javascript" src="public/js/libs.min.js"></script>
 <script type="text/javascript" src="public/js/main.min.js"></script>
