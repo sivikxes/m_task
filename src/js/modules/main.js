@@ -1,5 +1,7 @@
 $(function () {
     var $doc = $(document);
+    var $body = $('body');
+    var $modalRotate = $('#rotate');
     var $header = $('header');
     $doc.on('scroll', function (e) {
         if($doc.scrollTop() > 0){
@@ -40,7 +42,26 @@ $(function () {
         e.preventDefault();
         var $needEl = $($(this).attr('data-href'));
 
-        $('body').animate({scrollTop:$needEl.position().top}, '500');
+        $body.animate({scrollTop:$needEl.position().top}, '500');
     });
+    $('.scroll-view').on('click', function () {
+        var $this = $(this);
+        $body.addClass('modal-show');
+        $modalRotate.addClass('showen');
+        $modalRotate.find('.title-line').html($this.siblings('.product-title').clone()).append($this.siblings('.price-wrap').clone());
+        var $needDir = $this.siblings('img').attr('src').replace(/.*?products\/(.*?)\..*/,'$1');
+        $modalRotate.find('img').each(function (i,el) {
+            var src = $(el).attr('src').replace(/(.*?products\/).*?(\/.*$)/,'$1'+$needDir+'$2');
+            $(el).attr('src',src);
+        });
 
+    });
+    $('.modal .cross').on('click', function () {
+        $modalRotate.removeClass('showen');
+        $body.removeClass('modal-show');
+    });
+    $body.on('click', '.buy-btn', function () {
+        console.log('buy');
+
+    });
 });
