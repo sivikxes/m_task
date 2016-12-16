@@ -34,7 +34,7 @@ body {
         content: '☰';
         position: fixed;
         top: 10px;
-        right: 30px;
+        right: 20px;
         font-size: 30px;
         cursor: pointer;
         color: #fff;
@@ -91,7 +91,13 @@ body {
     top: -16px;
     margin: 60px auto;
   }
-
+  .sec4{
+    .comments{
+      &-item {
+        margin: 10px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -141,11 +147,69 @@ body {
     }
 
   }
+  .tabs a {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #fff32e;
 
+    &.active {
+      background: #fff32e;
+    }
+    img {
+      display: none;
+    }
+  }
   .btns-wrap{
     .btn{
       font-size: 20px;
       letter-spacing: normal;
+    }
+  }
+  .sec5 {
+
+    .buy-descr{
+      font-size: 18px;
+    }
+    .footer-descr {
+      font-size: 16px;
+    }
+    .list{
+      margin-top: 30px;
+      .compare-item{
+        display: block;
+      }
+      .list-item {
+        display: block;
+        font-size: 20px;
+        img{
+          display: none;
+        }
+      }
+    }
+    .section-descr{
+      font-size: 14px;
+    }
+    .section-title {
+      font-size: 28px;
+    }
+
+  }
+  .sec4 {
+    .section-title {
+      font-size: 28px;
+      padding: 10px;
+    }
+    .comments{
+      &-item {
+        h1 {
+          text-align: left;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }
