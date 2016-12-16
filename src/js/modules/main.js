@@ -60,8 +60,9 @@ $(function () {
         $modalRotate.removeClass('showen');
         $body.removeClass('modal-show');
     });
-    $body.on('click', '.buy-btn', function () {
+    $body.on('click', '.buy-btn', function (e) {
+        e.preventDefault();
         console.log('buy');
-
     });
+
 });
