@@ -51,10 +51,13 @@ $(function () {
         $modalRotate.addClass('showen');
         $modalRotate.find('.title-line').html($this.siblings('.product-title').clone()).append($this.siblings('.price-wrap').clone());
         var $needDir = $this.siblings('img').attr('src').replace(/.*?products\/(.*?)\..*/,'$1');
-        $modalRotate.find('img').each(function (i,el) {
-            var src = $(el).attr('src').replace(/(.*?products\/).*?(\/.*$)/,'$1'+$needDir+'$2');
-            $(el).attr('src',src);
-        });
+        var $imagesNeed = [];
+        for(var i = 1; i < 37; i++){
+            $imagesNeed.push('public/images/products/'+$needDir+'/'+i+'.jpg');
+        }
+
+        $("#carousel img").threesixty({images:$imagesNeed, method:'mousemove', direction:'forward', sensibility: 1});
+
 
     });
     $('.modal .cross').on('click', function () {
