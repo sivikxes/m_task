@@ -2,6 +2,7 @@ $(function () {
     var $doc = $(document);
     var $body = $('body');
     var $modalRotate = $('#rotate');
+    var $modalBuy = $('#buy');
     var $header = $('header');
     $doc.on('scroll', function (e) {
         if($doc.scrollTop() > 0){
@@ -58,11 +59,14 @@ $(function () {
     });
     $('.modal .cross').on('click', function () {
         $modalRotate.removeClass('showen');
+        $modalBuy.removeClass('showen');
         $body.removeClass('modal-show');
     });
     $body.on('click', '.buy-btn', function (e) {
         e.preventDefault();
-        console.log('buy');
+        $modalRotate.removeClass('showen');
+        $body.addClass('modal-show');
+        $modalBuy.addClass('showen');
     });
-
+    new WOW().init();
 });
