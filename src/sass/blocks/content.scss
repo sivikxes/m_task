@@ -467,7 +467,9 @@ header {
     height: 100px;
     background-color: #505050;
     border-top: 1px solid #fff;
+    padding-top: 20px;
   }
+
 
   .list {
     margin: 80px auto 30px;
@@ -489,4 +491,59 @@ header {
   }
 }
 
-
+.img-package {
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px 10px 0;
+}
+.box-descr {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: left;
+  padding: 0 20px;
+  line-height: 1.4;
+}
+.video-wrap {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px 20px;
+}
+.video-frame {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 560px;
+  height: 0;
+  padding-bottom: 31.5%;
+  position: relative;
+}
+.video-frame iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.joda {
+  display: inline-block;
+  vertical-align: top;
+}
+.video-title{
+  margin: 10px 0;
+  font-size: 36px;
+  display: none;
+}
+.soc-btn {
+  display: inline-block;
+  vertical-align: top;
+}
+.tel-foot {
+  display: inline-block;
+  vertical-align: top;
+}
+.tel-foot p{
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+}
