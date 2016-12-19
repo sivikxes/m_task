@@ -98,6 +98,12 @@ body {
       }
     }
   }
+  .joda{
+    display: none;
+  }
+  .video-title {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -109,6 +115,11 @@ body {
     margin: 0 auto;
     width: 180px;
   }
+  .video-frame {
+    max-width: 560px;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 470px) {
@@ -211,5 +222,9 @@ body {
         }
       }
     }
+  }
+
+  .img-package {
+    width: 100px;
   }
 }
