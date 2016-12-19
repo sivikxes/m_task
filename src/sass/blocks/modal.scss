@@ -8,6 +8,8 @@
   background-color: #fff;
   z-index: 200;
   padding: 40px 0;
+  overflow: hidden;
+  overflow-y: scroll;
 
   .cross {
     position: absolute;
@@ -38,5 +40,20 @@
 
   &.showen{
     display: block;
+  }
+}
+.buy-wrap{
+  display: block;
+  margin: 60px auto 0;
+  width: 320px;
+
+  input , textarea{
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px;
+    outline: none;
   }
 }
