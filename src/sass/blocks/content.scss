@@ -515,6 +515,52 @@ header {
   height: 0;
   padding-bottom: 31.5%;
   position: relative;
+
+  .prev-btn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    border-radius: 50%;
+    background: url("./../images/circle-left.svg") no-repeat;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &:hover {
+      zoom: 1.2;
+    }
+
+  }
+  .next-btn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    border-radius: 50%;
+    background: url("./../images/circle-right.svg") no-repeat;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &:hover {
+      zoom: 1.2;
+    }
+  }
+
+  &[data-vid="0"]{
+    iframe[data-id="0"]{
+      display: block;
+    }
+  }
+  &[data-vid="1"]{
+    iframe[data-id="1"]{
+      display: block;
+    }
+  }
+  &[data-vid="2"]{
+    iframe[data-id="2"]{
+      display: block;
+    }
+  }
 }
 .video-frame iframe{
   position: absolute;
@@ -524,6 +570,7 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
+  display: none;
 }
 .joda {
   display: inline-block;

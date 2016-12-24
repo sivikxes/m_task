@@ -4,6 +4,7 @@ $(function () {
     var $modalRotate = $('#rotate');
     var $modalBuy = $('#buy');
     var $header = $('header');
+    var $videoFrame = $('.video-frame');
     $doc.on('scroll', function (e) {
         if($doc.scrollTop() > 0){
             $header.addClass('scrolled');
@@ -45,6 +46,26 @@ $(function () {
 
         $body.animate({scrollTop:$needEl.position().top}, '500');
     });
+
+    $('.js-video-btn').on('click',function () {
+        var $this = $(this);
+        var curvid = parseInt($videoFrame.attr('data-vid'));
+       if($this.hasClass('next-btn')){
+           if(curvid==2){
+               curvid = 0;
+           } else {
+               curvid++;
+           }
+       } else {
+           if(curvid==0){
+               curvid = 2;
+           } else {
+               curvid--;
+           }
+       }
+        $videoFrame.attr('data-vid',curvid);
+    });
+
     $('.scroll-view').on('click', function () {
         var $this = $(this);
         $body.addClass('modal-show');
@@ -56,7 +77,7 @@ $(function () {
             $imagesNeed.push('public/images/products/'+$needDir+'/'+i+'.jpg');
         }
 
-        $("#carousel img").threesixty({images:$imagesNeed, method:'mousemove', direction:'forward', sensibility: 1});
+        $("#carousel img").threesixty({images:$imagesNeed, method:'click', direction:'forward', sensibility: 1});
 
 
     });
