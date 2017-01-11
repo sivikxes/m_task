@@ -86,6 +86,13 @@ $(function () {
         $modalBuy.removeClass('showen');
         $body.removeClass('modal-show');
     });
+    $('.modal').on('click', function (e) {
+        if($(e.target).closest('.modal-content').length == 0){
+            $modalRotate.removeClass('showen');
+            $modalBuy.removeClass('showen');
+            $body.removeClass('modal-show');
+        }
+    });
     $body.on('click', '.buy-btn', function (e) {
         e.preventDefault();
         $modalRotate.removeClass('showen');

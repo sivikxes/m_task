@@ -122,7 +122,34 @@ body {
   }
 
 }
+@media screen and (max-width: 700px) {
+  .box-descr {
 
+    &__item {
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 10px;
+
+      img {
+        float: none !important;
+        display: block;
+        width: 250px;
+        margin: 0 auto 10px;
+      }
+      .img-package {
+        float: right;
+      }
+      strong {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  #carousel {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 470px) {
   header {
     .right-pos {
