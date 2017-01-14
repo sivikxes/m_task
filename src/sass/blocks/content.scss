@@ -9,6 +9,7 @@ body {
 
   &.modal-show {
     overflow: hidden;
+    padding-right: 15px;
   }
 }
 .main-bg {
@@ -124,13 +125,13 @@ header {
     }
     .zvonok1{
       text-decoration: none;
-      font-size: 24px;
+      font-size: 20px;
       color: #fff32e;
-      padding: 0 12px;
+      padding: 5px 12px;
       border: 1px solid #fff32e;
-      border-radius: 4px;
       letter-spacing: -1.3px;
-      font-weight: 300;
+      font-weight: 400;
+      text-transform: uppercase;
       transition: all 200ms;
       position: relative;
       top: 3px;
@@ -197,19 +198,19 @@ header {
 
 .btns-wrap {
   margin: 20px 0;
+
   .btn {
     background-color: #fff32e;
-    border-radius: 6px;
     height: 50px;
     line-height: 50px;
     font-size: 28px;
-    letter-spacing: 8px;
+    text-transform: uppercase;
     font-weight: bolder;
     display: inline-block;
     text-decoration: none;
     color: black;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 24px;
     margin: 0 5px 5px;
     transition: all 200ms;
 
@@ -217,13 +218,26 @@ header {
       color: #fff;
       background-color: #222;
     }
+
+    &.cust-ntn {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid black;
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+      }
+
+    }
+
     &.btn2 {
       background-color: rgba(0, 0, 0, .6);
       color: #fff;
       border: 1px solid #fff;
       &:hover {
         color: black;
-        background-color: #fff32e;
+        background-color: #fff;
       }
     }
   }
@@ -314,14 +328,21 @@ header {
     font-weight: bold;
   }
   .scroll-view{
-    background-color: rgba(0,0,0,.6);
-    color: #fff;
-    border: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
     margin: 20px auto;
     display: inline-block;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 8px 24px;
     border-radius: 5px;
+    font-size: 24px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
   }
 }
 .price-wrap {
@@ -331,14 +352,14 @@ header {
   }
   .btn {
     background-color: #fff32e;
-    border-radius: 6px;
+    text-transform: uppercase;
     font-size: 26px;
     font-weight: bolder;
     display: inline-block;
     text-decoration: none;
     color: #000;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 5px 24px;
     margin: 10px 5px 5px;
     transition: all .2s;
     cursor: pointer;

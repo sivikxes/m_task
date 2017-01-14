@@ -33,6 +33,18 @@ $(function () {
         }
     });
 
+    $('.swiper-button-next').on('touchstart mousedown',function(e){
+        e.preventDefault();
+        mySwiper.swipeTo( mySwiper.activeIndex == mySwiper.slides.length-1? 0 :mySwiper.activeIndex+1 );
+    }).click(function(e){
+        e.preventDefault()
+    });
+    $('.swiper-button-prev').on('touchstart mousedown',function(e){
+        e.preventDefault();
+        mySwiper.swipeTo( mySwiper.activeIndex == 0?mySwiper.slides.length-1:mySwiper.activeIndex-1 );
+    }).click(function(e){
+        e.preventDefault()
+    });
     $tabsLink.on('touchstart mousedown',function(e){
         e.preventDefault();
         mySwiper.swipeTo( $(this).index() );
