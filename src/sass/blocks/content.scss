@@ -133,6 +133,7 @@ header {
       font-weight: 400;
       text-transform: uppercase;
       transition: all 200ms;
+      border-radius: 5px;
       position: relative;
       top: 3px;
       margin-left: 10px;
@@ -202,17 +203,18 @@ header {
   .btn {
     background-color: #fff32e;
     height: 50px;
-    line-height: 50px;
     font-size: 28px;
     text-transform: uppercase;
-    font-weight: bolder;
     display: inline-block;
     text-decoration: none;
     color: black;
     box-sizing: border-box;
-    padding: 0 24px;
+    padding: 8px 24px;
+    border-radius: 5px;
     margin: 0 5px 5px;
+    font-weight: 500;
     transition: all 200ms;
+    cursor: pointer;
 
     &:hover {
       color: #fff;
@@ -353,8 +355,8 @@ header {
   .btn {
     background-color: #fff32e;
     text-transform: uppercase;
-    font-size: 26px;
-    font-weight: bolder;
+    font-size: 24px;
+    border-radius: 5px;
     display: inline-block;
     text-decoration: none;
     color: #000;
@@ -362,6 +364,7 @@ header {
     padding: 5px 24px;
     margin: 10px 5px 5px;
     transition: all .2s;
+    font-weight: 500;
     cursor: pointer;
     &:hover {
       color: #fff;
@@ -444,53 +447,6 @@ header {
     max-width: 500px;
     margin: 0 auto  140px;
     padding: 0 15px;
-  }
-  .btn {
-    width: 240px;
-    height: 40px;
-    line-height: 40px;
-    display: block;
-    margin: 0 auto 40px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    font-size: 26px;
-    letter-spacing: 7px;
-    position: relative;
-    transition: all .3s;
-
-    &:hover {
-      background-color: #fff32e;
-      &:before{
-        border-left-color: #fff32e;
-      }
-      &:after {
-        border-right-color: #fff32e;
-      }
-    }
-
-    &:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border: 20px solid transparent;
-      border-left-color: #fff;
-      position: absolute;
-      right: -40px;
-      top: 0;
-      transition: all .3s;
-    }
-    &:after {
-      content: '';
-      width: 0;
-      height: 0;
-      top: 0;
-      border: 20px solid transparent;
-      border-right-color: #fff;
-      position: absolute;
-      left: -40px;
-      transition: all .3s;
-    }
   }
 
   .footer {
