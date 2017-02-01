@@ -52,14 +52,14 @@ $(function () {
         e.preventDefault()
     });
 
-    $('.section-btn').on('click', function (e) {
+    $('.section-btn').on('touchstart mousedown', function (e) {
         e.preventDefault();
         var $needEl = $($(this).attr('data-href'));
 
         $body.animate({scrollTop:$needEl.position().top}, '500');
     });
 
-    $('.js-video-btn').on('click',function () {
+    $('.js-video-btn').on('touchstart mousedown',function () {
         var $this = $(this);
         var curvid = parseInt($videoFrame.attr('data-vid'));
        if($this.hasClass('next-btn')){

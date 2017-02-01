@@ -10,8 +10,73 @@
     <link rel="stylesheet" type="text/css" href="public/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="public/css/main.css" />
+    <meta name="format-detection" content="telephone=no">
 </head>
 <body>
+<?php
+ $catalog_array = array(
+     0=>array(
+        'name'=>'MILLENIUM FALCON ',
+        'preview_img_mini'=>'public/images/products/Icons/Millenium_Falcon.jpg',
+        'preview_img'=>'public/images/products/Millenium_Falcon.jpg',
+        'price'=>'199грн',
+     ),
+     1=>array(
+         'name'=>'IMPERIAL STAR DESTROYER',
+         'preview_img_mini'=>'public/images/products/Icons/Star_Destroyer.jpg',
+         'preview_img'=>'public/images/products/Star_Destroyer.jpg',
+         'price'=>'199грн',
+     ),
+     2=>array(
+         'name'=>'Destroyer Droid',
+         'preview_img_mini'=>'public/images/products/Icons/Destroyer_Droid.jpg',
+         'preview_img'=>'public/images/products/Destroyer_Droid.jpg',
+         'price'=>'199грн',
+     ),
+     3=>array(
+         'name'=>'X-WING FIGHTER',
+         'preview_img_mini'=>'public/images/products/Icons/X_Wing.jpg',
+         'preview_img'=>'public/images/products/X_Wing.jpg',
+         'price'=>'199грн',
+     ),
+     4=>array(
+         'name'=>'Tie Fighter',
+         'preview_img_mini'=>'public/images/products/Icons/TIE_Fighter.jpg',
+         'preview_img'=>'public/images/products/TIE_Fighter.jpg',
+         'price'=>'199грн',
+     ),
+     5=>array(
+         'name'=>'AT-AT WALKER',
+         'preview_img_mini'=>'public/images/products/Icons/AT_AT.jpg',
+         'preview_img'=>'public/images/products/AT_AT.jpg',
+         'price'=>'199грн',
+     ),
+     6=>array(
+         'name'=>'Tie Advanced',
+         'preview_img_mini'=>'public/images/products/Icons/TIE_Advanced.jpg',
+         'preview_img'=>'public/images/products/TIE_Advanced.jpg',
+         'price'=>'199грн',
+     ),
+     7=>array(
+         'name'=>'R2-D2',
+         'preview_img_mini'=>'public/images/products/Icons/R2D2.jpg',
+         'preview_img'=>'public/images/products/R2D2.jpg',
+         'price'=>'199грн',
+     ),
+     8=>array(
+         'name'=>'AT-ST',
+         'preview_img_mini'=>'public/images/products/Icons/AT_ST.jpg',
+         'preview_img'=>'public/images/products/AT_ST.jpg',
+         'price'=>'199грн',
+     ),
+     9=>array(
+         'name'=>'Kylo Ren\'s Shuttle',
+         'preview_img_mini'=>'public/images/products/Icons/Kylo_Ren.jpg',
+         'preview_img'=>'public/images/products/Kylo_Ren.jpg',
+         'price'=>'199грн',
+     )
+ );
+?>
 <div class="main-bg"></div>
 <div class="section sec1" id="sec1">
     <header>
@@ -49,128 +114,32 @@
     </div>
     <div class="swiper-container">
         <div class="tabs">
-            <a href="#" class="active wow bounceInLeft" data-wow-delay=".5s">
-                <img src="public/images/products/Icons/Millenium_Falcon.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInLeft" data-wow-delay=".4s">
-                <img src="public/images/products/Icons/Star_Destroyer.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInLeft" data-wow-delay=".3s">
-                <img src="public/images/products/Icons/Destroyer_Droid.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInLeft" data-wow-delay=".2s">
-                <img src="public/images/products/Icons/X_Wing.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".1s">
-                <img src="public/images/products/Icons/TIE_Fighter.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".1s">
-                <img src="public/images/products/Icons/AT_AT.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".2s">
-                <img src="public/images/products/Icons/TIE_Advanced.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".3s">
-                <img src="public/images/products/Icons/R2D2.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".4s">
-                <img src="public/images/products/Icons/AT_ST.jpg" alt="">
-            </a>
-            <a href="#" class="wow bounceInRight" data-wow-delay=".5s">
-                <img src="public/images/products/Icons/Kylo_Ren.jpg" alt="">
-            </a>
+            <?php
+            $i = 0;
+            $count_items = count($catalog_array);
+
+            foreach ($catalog_array as $item){
+                echo '<a href="#" class="'.($i==0?"active":"").' wow bounceInLeft" data-wow-delay=".5s">
+                    <img src="'.$item['preview_img_mini'].'" alt="">
+                </a>';
+                $i++;
+            }
+            ?>
         </div>
-        <div class="swiper-wrapper"  >
-            <div class="swiper-slide">
-                <img src="public/images/products/Millenium_Falcon.jpg" data-description="MILLENIUM FALCON " />
-                <div class="product-title">MILLENIUM FALCON</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/Star_Destroyer.jpg"  data-description="IMPERIAL STAR DESTROYER " />
-                <div class="product-title">IMPERIAL STAR DESTROYER</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/Destroyer_Droid.jpg" data-description="Destroyer Droid " />
-                <div class="product-title">Destroyer Droid</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/X_Wing.jpg" data-description="X-WING FIGHTER " />
-                <div class="product-title">X-WING FIGHTER</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/TIE_Fighter.jpg" data-description="Tie Fighter" />
-                <div class="product-title">Tie Fighter</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/AT_AT.jpg" data-description="AT-AT WALKER " />
-                <div class="product-title">AT-AT WALKER</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/TIE_Advanced.jpg" data-description="Tie Advanced" />
-                <div class="product-title">Tie Advanced</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/R2D2.jpg" data-description="R2-D2 " />
-                <div class="product-title">R2-D2</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/AT_ST.jpg" data-description="AT-ST " />
-                <div class="product-title">AT-ST</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="public/images/products/Kylo_Ren.jpg" data-description="Kylo_Ren " />
-                <div class="product-title">Kylo Ren's Shuttle</div>
-                <div class="scroll-view">Дивитись в 3D</div>
-                <div class="price-wrap">
-                    Ціна:<strong>199грн</strong><br>
-                    <div class="btn buy-btn">Замовити</div>
-                </div>
-            </div>
+        <div class="swiper-wrapper">
+            <?php
+            foreach ($catalog_array as $item){
+                echo '<div class="swiper-slide">
+                    <img src="'.$item['preview_img'].'" data-description="'.$item['name'].'" />
+                    <div class="product-title">'.$item['name'].'</div>
+                    <div class="scroll-view">Дивитись в 3D</div>
+                    <div class="price-wrap">
+                        Ціна:<strong>'.$item['price'].'</strong><br>
+                        <div class=buy-btn">Замовити</div>
+                    </div>
+                </div>';
+            }
+            ?>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -304,7 +273,7 @@
         <a href="https://vk.com/metal3dpuzzlestarwars" target="_blank" class="soc-btn"><img class="face" src="public/images/vk.png" alt="Vkontakte"></a>
         <div class="tel-foot">
 
-            <p>+38(093) 914 69 72</p></div>
+            <p class="tell">+38(093) 914 69 72</p></div>
         <p class="textf">Всі права захищені 2017</p>
     </div>
 </div>
