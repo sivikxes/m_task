@@ -1,4 +1,5 @@
 <?php
+$it_has_order = false;
 if(isset($_POST["email"])){
     $email = $_POST["email"];
     $to = "order@metal3dpuzzle.com";
@@ -19,6 +20,8 @@ if(isset($_POST["email"])){
     $usermessage = "В найближчий час мы вам зателефонуемо, дякуемо за замовлення";
     mail($to,$subject,$message,$headers);
     mail($user,$usersubject,$usermessage,$userheaders);
+
+    $it_has_order = true;
 }
 ?>
 
@@ -36,7 +39,7 @@ if(isset($_POST["email"])){
     <link rel="stylesheet" type="text/css" href="public/css/main.css" />
     <meta name="format-detection" content="telephone=no">
 </head>
-<body>
+<body class="<?php echo $it_has_order?'modal-show':'' ?>">
 <?php
  $catalog_array = array(
      0=>array(
@@ -321,11 +324,11 @@ if(isset($_POST["email"])){
     </div>
 </div>
 
-<div class="modal" id="rotate">
+<div class="modal <?php echo $it_has_order?'showen':'' ?>" id="rotate">
     <div class="modal-content">
         <div class="cross">&#10005;</div>
         <div class="title-line">
-
+            <div style="padding: 10px 40px;">Дякуемо замовлення прийнято</div>
         </div>
         <div id="carousel">
             <img class="cloud9-item" src="public/images/products/AT_AT/1.jpg">
