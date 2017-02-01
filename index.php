@@ -3,28 +3,35 @@ $it_has_order = false;
 if(isset($_POST["email"])){
     $email = $_POST["email"];
     $to = "order@metal3dpuzzle.com";
-    $subject = "New order from".$_POST["name"];
-    $headers = "From: $email\n";
+    $subject = "New order from =?UTF-8?B?".base64_encode($_POST["name"])."?=";
+    $headers = array(
+        "From: {$email}",
+        "MIME-Version: 1.0",
+        "Content-Type: text/html;charset=utf-8"
+    );
     $phone = $_POST['phone'];
     $name = $_POST['name'];
     $inp_mess = $_POST['subject'];
-    $message = "Новый заказ.\n
-    Email Address: $email\n
-    Phone: $phone\n
-    Name: $name\n
-    Message: $inp_mess\n
+    $message = "Новый заказ.\r\n
+    Email Address: $email\r\n
+    Phone: $phone\r\n
+    Name: $name\r\n
+    Message: $inp_mess\r\n
     ";
     $user = "$email";
     $usersubject = "Замовлення прийнято";
-    $userheaders = "From: order@metal3dpuzzle.com\n";
+    $userheaders = array(
+        "From: order@metal3dpuzzle.com",
+        "MIME-Version: 1.0",
+        "Content-Type: text/html;charset=utf-8"
+    );
     $usermessage = "В найближчий час мы вам зателефонуемо, дякуемо за замовлення";
-    mail($to,$subject,$message,$headers);
-    mail($user,$usersubject,$usermessage,$userheaders);
+    mail($to,$subject,$message,implode("\r\n", $headers));
+    mail($user,$usersubject,$usermessage,implode("\r\n", $userheaders));
 
     $it_has_order = true;
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -181,7 +188,7 @@ if(isset($_POST["email"])){
                     <div class="scroll-view">Дивитись в 3D</div>
                     <div class="price-wrap">
                         Ціна:<strong>'.$item['price'].'</strong><br>
-                        <div class=buy-btn">Замовити</div>
+                        <div class="buy-btn">Замовити</div>
                     </div>
                 </div>';
             }
@@ -324,7 +331,7 @@ if(isset($_POST["email"])){
     </div>
 </div>
 
-<div class="modal <?php echo $it_has_order?'showen':'' ?>" id="rotate">
+<div class="modal" id="rotate">
     <div class="modal-content">
         <div class="cross">&#10005;</div>
         <div class="title-line">
@@ -332,6 +339,14 @@ if(isset($_POST["email"])){
         </div>
         <div id="carousel">
             <img class="cloud9-item" src="public/images/products/AT_AT/1.jpg">
+        </div>
+    </div>
+</div>
+<div class="modal <?php echo $it_has_order?'showen':'' ?>">
+    <div class="modal-content">
+        <div class="cross">&#10005;</div>
+        <div class="title-line">
+            <div style="padding: 10px 40px;">Дякуемо замовлення прийнято</div>
         </div>
     </div>
 </div>

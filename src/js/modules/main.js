@@ -98,6 +98,7 @@ $(function () {
     $('.modal .cross').on('click', function () {
         $modalRotate.removeClass('showen');
         $modalBuy.removeClass('showen');
+        $('.modal').removeClass('showen');
         $body.removeClass('modal-show');
     });
     $('.modal').on('click', function (e) {
