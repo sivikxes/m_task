@@ -117,11 +117,30 @@
             <?php
             $i = 0;
             $count_items = count($catalog_array);
-
+            $chet = $count_items%2 == 0;
+            $bounceRight = 0;
+            if($chet){
+                $bounceLeft=1*($count_items/2);
+            } else {
+                $bounceLeft=1*(($count_items-1)/2);
+            }
             foreach ($catalog_array as $item){
-                echo '<a href="#" class="'.($i==0?"active":"").' wow bounceInLeft" data-wow-delay=".5s">
+                if($bounceLeft <= 0){
+                    $class = 'bounceInRight';
+                    $time = $bounceRight;
+                } else {
+                    $class = 'bounceInLeft';
+                    $time = $bounceLeft;
+                }
+
+                echo '<a href="#" class="'.($i==0?"active":"").' wow '.$class.'" data-wow-delay=".'.$time.'s">
                     <img src="'.$item['preview_img_mini'].'" alt="">
                 </a>';
+                if($bounceLeft <= 0){
+                    $bounceRight++;
+                } else {
+                    $bounceLeft--;
+                }
                 $i++;
             }
             ?>

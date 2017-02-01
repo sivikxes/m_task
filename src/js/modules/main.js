@@ -82,15 +82,17 @@ $(function () {
         var $this = $(this);
         $body.addClass('modal-show');
         $modalRotate.addClass('showen');
-        $modalRotate.find('.title-line').html($this.siblings('.product-title').clone()).append($this.siblings('.price-wrap').clone());
-        var $needDir = $this.siblings('img').attr('src').replace(/.*?products\/(.*?)\..*/,'$1');
-        var $imagesNeed = [];
-        for(var i = 1; i < 37; i++){
-            $imagesNeed.push('public/images/products/'+$needDir+'/'+i+'.jpg');
+        if(window.innerWidth >=600){
+            $modalRotate.find('.title-line').html($this.siblings('.product-title').clone()).append($this.siblings('.price-wrap').clone());
+            var $needDir = $this.siblings('img').attr('src').replace(/.*?products\/(.*?)\..*/,'$1');
+            var $imagesNeed = [];
+            for(var i = 1; i < 37; i++){
+                $imagesNeed.push('public/images/products/'+$needDir+'/'+i+'.jpg');
+            }
+            $("#carousel img").threesixty({images:$imagesNeed, method:'click', direction:'forward', sensibility: 1});
+        } else {
+            $modalRotate.find('.title-line').html('<div style="padding: 0 30px">Нажаль перегляд в 3Д можливий тільки для десктопної версії сайта, для використання цієї функції скористайтесь Вашим ПК</div>');
         }
-
-        $("#carousel img").threesixty({images:$imagesNeed, method:'click', direction:'forward', sensibility: 1});
-
 
     });
     $('.modal .cross').on('click', function () {
