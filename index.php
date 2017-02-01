@@ -1,3 +1,27 @@
+<?php
+if(isset($_POST["email"])){
+    $email = $_POST["email"];
+    $to = "order@metal3dpuzzle.com";
+    $subject = "New order from".$_POST["name"];
+    $headers = "From: $email\n";
+    $phone = $_POST['phone'];
+    $name = $_POST['name'];
+    $inp_mess = $_POST['subject'];
+    $message = "Новый заказ.\n
+    Email Address: $email\n
+    Phone: $phone\n
+    Name: $name\n
+    Message: $inp_mess\n
+    ";
+    $user = "$email";
+    $usersubject = "Замовлення прийнято";
+    $userheaders = "From: order@metal3dpuzzle.com\n";
+    $usermessage = "В найближчий час мы вам зателефонуемо, дякуемо за замовлення";
+    mail($to,$subject,$message,$headers);
+    mail($user,$usersubject,$usermessage,$userheaders);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -312,7 +336,7 @@
     <div class="modal-content">
         <div class="cross">&#10005;</div>
         <div class="buy-wrap">
-            <form id="contact" method="post" action="send.php">
+            <form id="contact" method="post" action="/">
                 <input name="name" placeholder="Вкажіть Ваше ім'я" class="name" type="text" required />
                 <input name="phone" placeholder="Вкажіть Ваш телефон" class="tel" type="text" required />
                 <input name="email" placeholder="Вкажіть Ваш Email" class="email" type="text" required />
